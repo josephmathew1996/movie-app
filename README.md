@@ -6,7 +6,7 @@ Single page web application for movies
 
 In the project directory, you can run:
 
-## `yarn install`
+### `yarn install`
 
 Installs all the dependencies required for the application.
 
