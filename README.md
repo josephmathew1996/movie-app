@@ -1,14 +1,14 @@
-# Getting Started with Create React App
+# Movie App
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
-
-## `yarn install`
-
-Installs all the dependencies required for the application.
+Single page web application for movies
 
 ## Available Scripts
 
 In the project directory, you can run:
+
+## `yarn install`
+
+Installs all the dependencies required for the application.
 
 ### `yarn start`
 
