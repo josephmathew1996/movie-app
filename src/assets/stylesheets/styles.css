@@ -14,10 +14,16 @@ body {
   background-color: snow;
 }
 .card {
-  height: 300px;
+  /* height: 300px;
   margin-left: 25px;
-  margin-right: 25px;
+  margin-right: 25px;*/
+  display: block;
   background-color: white;
+}
+
+.card-body {
+  padding: 50px 10px;
+  min-height: 300px;
 }
 
 hr {
@@ -26,13 +32,47 @@ hr {
 
 .form-group {
   width: 50%;
-  margin-left: 150px;
   padding: 10px;
+  margin: 0 auto;
 }
 .add-button {
   float: right;
+  margin-top: 35px;
+}
+
+.text-center {
+  margin: 20px 0;
+}
+
+.card-row .card .btn {
+  width: 50%;
 }
 
 .pagination {
-  padding: 50px;
+  padding: 50px 50px 0px 50px;
+  text-align: center;
+  display: block;
+}
+
+.pagination li {
+  display: inline-block;
+  margin: 0 10px;
+}
+
+.pagination li a {
+  padding: 8px 12px;
+  background: #0d6efd;
+  color: #fff !important;
+}
+
+.modal-body .form-group {
+  width: 100%;
+}
+
+.form-checkbox input[type="checkbox"] {
+  margin-right: 6px;
+}
+
+.form-checkbox label {
+  margin: 5px;
 }

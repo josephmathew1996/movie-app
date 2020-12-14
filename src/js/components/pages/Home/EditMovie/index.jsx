@@ -177,7 +177,7 @@ export class EditMovieModal extends Component {
                             <Label for="imdbrating">IMDB Rating</Label>
                             <Input value={imdbRating} type="number" step="0.1" min={1} max={10} name="imdbrating" id="editImdbrating" placeholder="IMDB Rating" onChange={(e) => { this.onChangeHandler(e, 'imdbRating') }} />
                         </FormGroup>
-                        <FormGroup>
+                        <FormGroup className="form-checkbox">
                             <Label for="genre">Select Genre</Label>
                             <br />
                             {

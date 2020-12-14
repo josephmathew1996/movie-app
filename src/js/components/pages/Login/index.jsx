@@ -79,35 +79,6 @@ class Login extends React.Component {
             email,
             password, alertColor, alertMessage } = this.state;
         return (
-            // <div className="body-wrapper xy-center login-wrap">
-            //     <div className="login">
-            //         <div className="col col-left">
-            //             <Form className="form1" onSubmit={this.onSubmitLogin}>
-            //                 <FormGroup>
-            //                     <Label className="label" htmlFor="username">Username</Label>
-            //                     <Input value={email} onChange={(e) => this.onInputChange(e.target.value, 'username')} type="text" name="username" id="username" placeholder="Enter username" />
-            //                 </FormGroup>
-            //                 <FormGroup>
-            //                     <Label className="label" htmlFor="userPassword">Password</Label>
-            //                     <div className={toggle ? 'switch-icon switch-active' : 'switch-icon'}>
-            //                         <Input type={toggle ? 'text' : 'password'} value={password} onChange={(e) => this.onInputChange(e.target.value, 'password')} name="password" id="userPassword" placeholder="Enter password" />
-            //                         <div className="icon-wrap">
-            //                             <i className="fi flaticon-visibility" onClick={this.toggleType}></i>
-            //                             <i className="fi flaticon-visibility-1" onClick={this.toggleType}></i>
-            //                         </div>
-            //                     </div>
-            //                 </FormGroup>
-            //                 <Button color="primary" className="btn">Submit</Button>
-            //                 <Alert color="danger" isOpen={alertShow}>
-            //                     {alertMessage}
-            //                 </Alert>
-            //             </Form>
-            //         </div>
-            //         <div className="col col-right">
-            //             <img className="navbar-brand" src="/media/logo.png" alt="" />
-            //         </div>
-            //     </div>
-            // </div>
             <div className="login">
                 <Container>
                     <Row>

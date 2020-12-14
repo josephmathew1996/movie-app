@@ -223,33 +223,40 @@ export class Home extends Component {
                     </div>
                 }
                 <br />
-                <div className="row">
-                    <div className="col-3">
-                        <label htmlFor="Select1">Movies per page : </label>
-                        <select className="form-control" onChange={(e) => { this.onChangeHandler(e, 'itemsPerPage') }}>
-                            <option value={8}>8</option>
-                            <option value={12}>12</option>
-                            <option value={16}>16</option>
-                        </select>
-                    </div>
-                    <div className="col-3">
-                        <label htmlFor="Select1">Search by movie  </label>
-                        <input className="form-control" value={name} onChange={(e) => { this.onChangeHandler(e, 'name') }} />
-                    </div>
-                    <div className="col-3">
-                        <label htmlFor="Select1">Search by director </label>
-                        <input className="form-control" value={director} onChange={(e) => { this.onChangeHandler(e, 'director') }} />
-                    </div>
-                    <div className="col-3">
-                        <label htmlFor="Select1">Sort by  </label>
-                        <select className="form-control" onChange={(e) => { this.onChangeHandler(e, 'sortby') }}>
-                            <option value="">Choose</option>
-                            <option value="name">Name</option>
-                            <option value="director">Director</option>
-                        </select>
-                    </div>
-                </div>
                 <div className="container">
+                    <div className="row">
+                        <div className="col-3">
+                            <label htmlFor="Select1">Movies per page : </label>
+                            <select className="form-control" onChange={(e) => { this.onChangeHandler(e, 'itemsPerPage') }}>
+                                <option value={8}>8</option>
+                                <option value={12}>12</option>
+                                <option value={16}>16</option>
+                            </select>
+                        </div>
+                        <div className="col-3">
+                            <label htmlFor="Select1">Search by movie  </label>
+                            <input className="form-control" value={name} onChange={(e) => { this.onChangeHandler(e, 'name') }} />
+                        </div>
+                        <div className="col-3">
+                            <label htmlFor="Select1">Search by director </label>
+                            <input className="form-control" value={director} onChange={(e) => { this.onChangeHandler(e, 'director') }} />
+                        </div>
+                        <div className="col-3">
+                            <label htmlFor="Select1">Sort by  </label>
+                            <select className="form-control" onChange={(e) => { this.onChangeHandler(e, 'sortby') }}>
+                                <option value="">Choose</option>
+                                <option value="name">Name</option>
+                                <option value="director">Director</option>
+                            </select>
+                        </div>
+                    </div>
+                    <Pagination className="pagination"
+                        activePage={pageSelected}
+                        itemsCountPerPage={parseInt(itemsPerPage)}
+                        totalItemsCount={totalItems}
+                        pageRangeDisplayed={5}
+                        onChange={this.selectPage}
+                    />
                     <h3 className="text-center">Movies</h3>
                     {
                         loading && (
@@ -257,7 +264,7 @@ export class Home extends Component {
                                 <Loader color="info" />
                             </div>
                         )}
-                    <div className="row mt-5">
+                    <div className="row card-row">
                         {
                             !loading && movies && movies.length > 0 &&
                             movies.map((movie, index) => {
@@ -299,19 +306,13 @@ export class Home extends Component {
                         )}
                     </div>
                 </div>
-                <Pagination className="pagination"
-                    activePage={pageSelected}
-                    itemsCountPerPage={parseInt(itemsPerPage)}
-                    totalItemsCount={totalItems}
-                    pageRangeDisplayed={5}
-                    onChange={this.selectPage}
-                />
+
                 {
                     toggleAdd &&
                     <AddMovieModal isOpen={toggleAdd} toggle={this.toggleAdd} getAllMovies={this.getAllMovies} />
                 }
                 {
-                    toggleEdit && movieID > 0 && movieSelected &&
+                    toggleEdit && movieID > 0 && movieSelected && movieSelected.name &&
                     <EditMovieModal isOpen={toggleEdit} toggle={this.toggleEdit} getAllMovies={this.getAllMovies} movie={movieSelected} movieID={movieID} />
                 }
                 {
