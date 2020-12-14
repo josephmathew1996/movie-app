@@ -2,6 +2,12 @@
 
 Single page web application for movies
 
+## Setup
+
+### Requirements
+
+- Ensure `yarn` is installed
+
 ## Available Scripts
 
 In the project directory, you can run:
