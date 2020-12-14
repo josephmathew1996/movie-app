@@ -68,7 +68,6 @@ export class Home extends Component {
                 params.director = this.state.director
                 params.sortby = this.state.sortby
                 let response = await getMovie(params);
-                // console.log("response", response);
                 this.setState({
                     movies: response.data.movies,
                     numberOfPages: response.data.noOfPages,
@@ -186,7 +185,6 @@ export class Home extends Component {
                 loading: true
             }, async () => {
                 try {
-                    // console.log("movie id", this.state.movieID)
                     await deleteMovie(this.state.movieID)
                     this.setState({
                         loading: false,
@@ -301,16 +299,13 @@ export class Home extends Component {
                         )}
                     </div>
                 </div>
-                {
-                    !loading && movies && movies.length > 0 &&
-                    <Pagination className="pagination"
-                        activePage={pageSelected}
-                        itemsCountPerPage={parseInt(itemsPerPage)}
-                        totalItemsCount={totalItems}
-                        pageRangeDisplayed={5}
-                        onChange={this.selectPage}
-                    />
-                }
+                <Pagination className="pagination"
+                    activePage={pageSelected}
+                    itemsCountPerPage={parseInt(itemsPerPage)}
+                    totalItemsCount={totalItems}
+                    pageRangeDisplayed={5}
+                    onChange={this.selectPage}
+                />
                 {
                     toggleAdd &&
                     <AddMovieModal isOpen={toggleAdd} toggle={this.toggleAdd} getAllMovies={this.getAllMovies} />
