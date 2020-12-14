@@ -66,7 +66,6 @@ export class AddMovieModal extends Component {
                     body.genre = genresSelected
                     body["99popularity"] = parseFloat(popularity)
                     body.imdb_score = parseFloat(imdbRating)
-                    console.log("body", body)
                     await addMovie(body)
                     this.setState({
                         loading: false,

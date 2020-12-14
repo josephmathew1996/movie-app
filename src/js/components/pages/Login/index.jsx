@@ -51,7 +51,6 @@ class Login extends React.Component {
                 password: this.state.password.trim()
             }
             login(body).then((response) => {
-                // console.log(response, response)
                 if (response.status === "SUCCESS" && response.statusCode === 200) {
                     const { access_token } = response.data
                     const userDetails = response.data.userDetails
