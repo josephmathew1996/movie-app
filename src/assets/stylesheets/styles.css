@@ -1,0 +1,38 @@
+.login {
+  font-family: sans-serif;
+  text-align: center;
+}
+body {
+  background-color: snow;
+}
+#submit {
+  background-color: limegreen;
+}
+
+.jumbotron {
+  margin-top: 50px;
+  background-color: snow;
+}
+.card {
+  height: 300px;
+  margin-left: 25px;
+  margin-right: 25px;
+  background-color: white;
+}
+
+hr {
+  width: 100%;
+}
+
+.form-group {
+  width: 50%;
+  margin-left: 150px;
+  padding: 10px;
+}
+.add-button {
+  float: right;
+}
+
+.pagination {
+  padding: 50px;
+}
